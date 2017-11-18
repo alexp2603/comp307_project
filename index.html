@@ -1,29 +1,126 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MUS Tutors</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  </head>
+
 <body>
-  <div class="navigationBar" id="navigationBar">
-    <h1><a href="index.html">MUS Tutors</a></h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tutors.html">Tutors</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="messages.html">Messages</a></li>
-      <li><a href="signup.html">Sign Up</a></li>
-    </ul>
+  <nav class="navbar navbar-inverse navbar-static-top">
+  	<div class="container">
+  		<div class="navbar-header">
+  			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  				<span class="sr-only">Toggle navigation</span>
+  				<span class="icon-bar"></span>
+  				<span class="icon-bar"></span>
+  				<span class="icon-bar"></span>
+  			</button>
+  			<a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
+  		</div>
+  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  			<ul class="nav navbar-nav navbar-right">
+          <li style="padding-top: 8px"><a href="index.html">Home</a></li>
+          <li style="padding-top: 8px"><a href="tutors.html">Tutors</a></li>
+          <li style="padding-top: 8px"><a href="courses.html">Courses</a></li>
+          <li style="padding-top: 8px"><a href="messages.html">Messages</a></li>
+          <li class="signUp" style="padding-top: 8px"><a href="signUp.html">Sign Up</a></li>
+  				<!--<li class="dropdown">
+  					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
+  					<ul class="dropdown-menu">
+  						<li><a href="#">Design</a></li>
+  						<li><a href="#">Development</a></li>
+  						<li><a href="#">Consulting</a></li>
+  					</ul>
+  				</li>-->
+  			</ul>
+  		</div>
+  	</div>
+  </nav>
+
+  <div class="jumbotron">
+	<div class="container">
+		<h1>Classes Shouldn't Be This Hard</h1>
+		<p>Need help in your classes? We're here to help.</p>
+		<br>
+		<p><a class="btn btn-primary btn-lg" href="signup.html" role="button">Sign Up »</a> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+	</div>
+</div>
+
+<div class="container">
+  <section class="call-to-action">
+  	<div class="row">
+  		<div class="col-md-4">
+  			<i class="material-icons" style="font-size:80px;">computer</i>
+  			<h3>Simple and Easy Interface</h3>
+  			<p>Our interface is intuitive and a breeze to navigate, making finding the right tutor for you easier than ever!</p>
+  		</div>
+  		<div class="col-md-4">
+  			<i class="material-icons" style="font-size:80px;">star</i>
+  			<h3>Guarenteed Quality</h3>
+  			<p>Our tutors are strictly vetted and chosen carefully to ensure the upmost quality and experience.</p>
+  		</div>
+  		<div class="col-md-4">
+  			<i class="material-icons" style="font-size:80px;">group</i>
+  			<h3>Peer-to-Peer Review System</h3>
+  			<p>Find the right tutor for you through our detailed review system.</p>
+  		</div>
+  	</div>
+  </section>
+</div>
+
+
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+
+    <h3>MUS Tutors</h3>
+
+    <p class="footer-company-name">MUS Tutors &copy; 2017</p>
   </div>
 
+  <div class="footer-center">
 
-	</header>
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>845 Sherbrooke St W</span> Montreal, Quebec</p>
+    </div>
 
-<footer>
-  <p>About Us</p>
-  <p>Our Features</p>
-  <p>Follow Us</p>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+1 514-123-4567</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:info@mustutors.com">info@mustutors.com</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-right">
+
+    <p class="footer-company-about">
+      <span>About the company</span>
+      MUS Tutors is a student-run initiative that aims to connect like-minded students.
+
+    <div class="footer-icons">
+
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+
+    </div>
+
+  </div>
+
 </footer>
+
 </body>
 </html>
