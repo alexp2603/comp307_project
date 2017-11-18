@@ -1,0 +1,20 @@
+CREATE TABLE accounts(
+	studentID int NOT NULL UNIQUE,
+    name varchar(255),
+    password varchar(255),
+	email varchar(255),
+    yearOfStudy enum('U0','U1','U2','U3','U3+'),
+    phoneNumber varchar(255),
+    course1 int,
+    course2 int,
+    course3 int,
+    course4 int,
+    course5 int,
+    
+    PRIMARY KEY (studentID),
+    FOREIGN KEY (course1),
+    FOREIGN KEY (course2),
+    FOREIGN KEY (course3),
+    FOREIGN KEY (course4),
+    FOREIGN KEY (course5)
+);
