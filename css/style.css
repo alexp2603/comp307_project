@@ -41,7 +41,7 @@ p {
 }
 .jumbotron {
 	background: white;
-  background-image: url(images/slide_2.jpg);
+  background-image: url("/img/slide_2.jpg");
 	color: white;
 	text-align: left;
   min-height: 600px;
