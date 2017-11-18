@@ -1,20 +1,42 @@
-CREATE TABLE accounts(
-	studentID int NOT NULL UNIQUE,
-    name varchar(255),
-    password varchar(255),
-	email varchar(255),
-    yearOfStudy enum('U0','U1','U2','U3','U3+'),
-    phoneNumber varchar(255),
-    course1 int,
-    course2 int,
-    course3 int,
-    course4 int,
-    course5 int,
+SQL CODE REQUIRED TO GENERATE TABLES AND DATABASE
+
+create table STUDENTS(
+    STUDENT_ID int not null primary key,
+    STUDENT_NAME varchar(255),
+    STUDENT_PASSWORD varchar(255),
+    STUDENT_EMAIL varchar(255),
+    STUDENT_YEAROFSTUDY enum('U0','U1','U2','U3','U3+'),
+    STUDENT_PHONE varchar(255),
+    STUDENT_COURSE1 varchar(255),
+    STUDENT_COURSE2 varchar(255),
+    STUDENT_COURSE3 varchar(255),
+    STUDENT_COURSE4 varchar(255),
+    STUDENT_COURSE5 varchar(255),
+
+    foreign key(STUDENT_COURSE1) references COURSES(COURSE_ID),
+    foreign key(STUDENT_COURSE2) references COURSES(COURSE_ID),
+    foreign key(STUDENT_COURSE3) references COURSES(COURSE_ID),
+    foreign key(STUDENT_COURSE4) references COURSES(COURSE_ID),
+    foreign key(STUDENT_COURSE5) references COURSES(COURSE_ID)
+);
+
+create table COURSES(
+    COURSE_ID varchar(255) not null primary key
+);
+
+
+create table ENGAGEMENTS(
+    ENGAGEMENT_ID int auto_increment primary key,
+    ENGAGEMENT_STUDENT int,
+    ENGAGEMENT_TUTOR int,
+    ENGAGEMENT_DATETIME datetime, 
+    ENGAGEMENT_DURATION int, #number of minutes
+    ENGAGEMENT_LOCATION varchar(255),
+    ENGAGEMENT_FEE int,
+    ENGAGEMENT_COURSEID int,
+
+    foreign key(ENGAGEMENT_STUDENT) references STUDENTS(STUDENT_ID);
+    foreign key(ENGAGEMENT_TUTOR) references STUDENTS(STUDENT_ID);
+    foreign key(ENGAGEMENT_COURSEID) references COURSES(COURSE_ID);
     
-    PRIMARY KEY (studentID),
-    FOREIGN KEY (course1),
-    FOREIGN KEY (course2),
-    FOREIGN KEY (course3),
-    FOREIGN KEY (course4),
-    FOREIGN KEY (course5)
 );
