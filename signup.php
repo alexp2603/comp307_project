@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MUS Tutors</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/signupstyles.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/signupstyles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
@@ -19,39 +19,11 @@
     <body>
 
       <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
-        	<div class="container">
-        		<div class="navbar-header">
-        			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        				<span class="sr-only">Toggle navigation</span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        			</button>
-        			<a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
-        		</div>
-        		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        			<ul class="nav navbar-nav navbar-right">
-                <li style="padding-top: 8px"><a href="index.html">Home</a></li>
-                <li style="padding-top: 8px"><a href="tutors.html">Tutors</a></li>
-                <li style="padding-top: 8px"><a href="courses.html">Courses</a></li>
-                <li style="padding-top: 8px"><a href="messages.html">Messages</a></li>
-                <li class="signin" style="padding-top: 8px"><a href="signin.html">Sign In</a></li>
-                <li class="signUp" style="padding-top: 8px"><a href="signUp.html">Sign Up</a></li>
-        				<!--<li class="dropdown">
-        					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
-        					<ul class="dropdown-menu">
-        						<li><a href="#">Design</a></li>
-        						<li><a href="#">Development</a></li>
-        						<li><a href="#">Consulting</a></li>
-        					</ul>
-        				</li>-->
-        			</ul>
-        		</div>
-        	</div>
-        </nav>
+          <?php
+            include("header.php");
+          ?>
 
-        <form action="../php/index.php/api/registerstudent" method="POST">
+        <form action="php/index.php/api/registerstudent" method="POST">
           <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
