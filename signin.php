@@ -16,39 +16,17 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
-        	<div class="container">
-        		<div class="navbar-header">
-        			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        				<span class="sr-only">Toggle navigation</span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        			</button>
-        			<a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
-        		</div>
-        		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        			<ul class="nav navbar-nav navbar-right">
-                <li style="padding-top: 8px"><a href="index.html">Home</a></li>
-                <li style="padding-top: 8px"><a href="tutors.html">Tutors</a></li>
-                <li style="padding-top: 8px"><a href="courses.html">Courses</a></li>
-                <li style="padding-top: 8px"><a href="messages.html">Messages</a></li>
-                <li class="signin" style="padding-top: 8px"><a href="signin.html">Sign In</a></li>
-                <li class="signUp" style="padding-top: 8px"><a href="signUp.html">Sign Up</a></li>
-        				<!--<li class="dropdown">
-        					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
-        					<ul class="dropdown-menu">
-        						<li><a href="#">Design</a></li>
-        						<li><a href="#">Development</a></li>
-        						<li><a href="#">Consulting</a></li>
-        					</ul>
-        				</li>-->
-        			</ul>
-        		</div>
-        	</div>
-        </nav>
 
+      <?php
+        include("header.php");
+      ?>
+
+
+<<<<<<< HEAD:signin.php
+        <form action="php/login.php" method="POST">
+=======
         <form action="" method="POST">
+>>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e:signin.php
           <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
@@ -57,10 +35,10 @@
                             <h2 style="padding-bottom: 20px">Sign In</h2>
                         </div>
                         <label><b>Student ID<span style="color:red">*</span></b></label>
-                        <input type="text" placeholder="Student ID" name="Student ID" required>
+                        <input type="text" placeholder="Student ID" name="login_ID" required>
 
                         <label><b>Password<span style="color:red">*</span></b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required>
+                        <input type="password" placeholder="Enter Password" name="login_password" required>
 
                         <button type="submit">Login</button>
                         <input type="checkbox" checked="checked"> Remember me
