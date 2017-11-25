@@ -1,9 +1,12 @@
 <html>
+<<<<<<< HEAD
 
 <?php
         session_start();
 ?>
 
+=======
+>>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e
   <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
                 <div class="navbar-header">
@@ -16,6 +19,7 @@
                         <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<<<<<<< HEAD
                 <ul class="nav navbar-nav navbar-right">
                         <li style="padding-top: 8px"><a href="index.php">Home</a></li>
                         <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
@@ -41,3 +45,15 @@
   </nav>
 </html>
 
+=======
+                        <ul class="nav navbar-nav navbar-right">
+          <li style="padding-top: 8px"><a href="index.php">Home</a></li>
+          <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
+          <li class="signin" style="padding-top: 8px"><a href="signin.php">Sign In</a></li>
+          <li class="signUp" style="padding-top: 8px"><a href="signup.php">Sign Up</a></li>
+                        </ul>
+                </div>
+        </div>
+  </nav>
+</html>
+>>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e
