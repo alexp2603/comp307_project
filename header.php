@@ -1,17 +1,10 @@
 <html>
-<<<<<<< HEAD
-=======
->>>>>>> 61745c823e9ff2178a97048225886de229ae7e21
+
 
 <?php
         session_start();
 ?>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e
->>>>>>> 61745c823e9ff2178a97048225886de229ae7e21
   <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
                 <div class="navbar-header">
@@ -21,22 +14,22 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                         </button>
-<<<<<<< HEAD
+
                         <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">Tutors</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                         <li style="padding-top: 8px"><a href="index.php">Home</a></li>
                         <li style="padding-top: 8px"><a href="about.php">About</a></li>
-=======
+
                         <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<<<<<<< HEAD
+
                 <ul class="nav navbar-nav navbar-right">
                         <li style="padding-top: 8px"><a href="index.php">Home</a></li>
                         <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
->>>>>>> 61745c823e9ff2178a97048225886de229ae7e21
+
                         <?php
                         if(isset($_SESSION["NAME"]))
                         {
@@ -59,9 +52,6 @@
   </nav>
 </html>
 
-<<<<<<< HEAD
-=======
-=======
                         <ul class="nav navbar-nav navbar-right">
           <li style="padding-top: 8px"><a href="index.php">Home</a></li>
           <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
@@ -72,5 +62,3 @@
         </div>
   </nav>
 </html>
->>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e
->>>>>>> 61745c823e9ff2178a97048225886de229ae7e21
