@@ -1,8 +1,4 @@
 <html>
-<<<<<<< HEAD
-=======
-
->>>>>>> d072255e594703b32df30a71fffed943c623cca1
 
 <?php
         session_start();
@@ -17,28 +13,12 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                         </button>
-<<<<<<< HEAD
-=======
-
->>>>>>> d072255e594703b32df30a71fffed943c623cca1
                         <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">Tutors</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                         <li style="padding-top: 8px"><a href="index.php">Home</a></li>
                         <li style="padding-top: 8px"><a href="about.php">About</a></li>
-<<<<<<< HEAD
-=======
-
-                        <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav navbar-right">
-                        <li style="padding-top: 8px"><a href="index.php">Home</a></li>
-                        <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
-
->>>>>>> d072255e594703b32df30a71fffed943c623cca1
                         <?php
                         if(isset($_SESSION["NAME"]))
                         {
@@ -61,16 +41,3 @@
   </nav>
 </html>
 
-<<<<<<< HEAD
-=======
-                        <ul class="nav navbar-nav navbar-right">
-          <li style="padding-top: 8px"><a href="index.php">Home</a></li>
-          <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
-          <li class="signin" style="padding-top: 8px"><a href="signin.php">Sign In</a></li>
-          <li class="signUp" style="padding-top: 8px"><a href="signup.php">Sign Up</a></li>
-                        </ul>
-                </div>
-        </div>
-  </nav>
-</html>
->>>>>>> d072255e594703b32df30a71fffed943c623cca1
