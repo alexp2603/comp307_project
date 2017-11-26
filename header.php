@@ -1,9 +1,18 @@
 <html>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 879ce824aff1920e2e3d9836c65ced7cb0de51a6
 
 <?php
         session_start();
 ?>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e
+>>>>>>> 879ce824aff1920e2e3d9836c65ced7cb0de51a6
   <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
                 <div class="navbar-header">
@@ -13,12 +22,22 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                         </button>
+<<<<<<< HEAD
                         <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">Tutors</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                         <li style="padding-top: 8px"><a href="index.php">Home</a></li>
                         <li style="padding-top: 8px"><a href="about.php">About</a></li>
+=======
+                        <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<<<<<<< HEAD
+                <ul class="nav navbar-nav navbar-right">
+                        <li style="padding-top: 8px"><a href="index.php">Home</a></li>
+                        <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
+>>>>>>> 879ce824aff1920e2e3d9836c65ced7cb0de51a6
                         <?php
                         if(isset($_SESSION["NAME"]))
                         {
@@ -41,3 +60,18 @@
   </nav>
 </html>
 
+<<<<<<< HEAD
+=======
+=======
+                        <ul class="nav navbar-nav navbar-right">
+          <li style="padding-top: 8px"><a href="index.php">Home</a></li>
+          <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
+          <li class="signin" style="padding-top: 8px"><a href="signin.php">Sign In</a></li>
+          <li class="signUp" style="padding-top: 8px"><a href="signup.php">Sign Up</a></li>
+                        </ul>
+                </div>
+        </div>
+  </nav>
+</html>
+>>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e
+>>>>>>> 879ce824aff1920e2e3d9836c65ced7cb0de51a6
