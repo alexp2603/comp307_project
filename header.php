@@ -14,17 +14,12 @@
                                 <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">Tutors</a>
+
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                         <li style="padding-top: 8px"><a href="index.php">Home</a></li>
                         <li style="padding-top: 8px"><a href="about.php">About</a></li>
-                        <a class="navbar-brand" style="font-size: 35px;padding-top: 20px" href="#">MUS Tutors</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                        <li style="padding-top: 8px"><a href="index.php">Home</a></li>
-                        <li style="padding-top: 8px"><a href="courses.php">Courses Covered</a></li>
                         <?php
                         if(isset($_SESSION["NAME"]))
                         {
@@ -47,7 +42,3 @@
   </nav>
 </html>
 
-                </div>
-        </div>
-  </nav>
-</html>

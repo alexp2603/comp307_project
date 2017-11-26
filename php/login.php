@@ -48,8 +48,6 @@ elseif($row_PASSWORD[0] == $password)
 	$_SESSION['NAME'] = $name;
 	$_SESSION['PHONE'] = $phone;
 	$_SESSION['EMAIL'] = $email;
-	$_SESSION['ID'] = $ID;
-	$_SESSION['NAME'] = $name;
 
 	header("Location: ../index.php");
 }

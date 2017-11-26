@@ -23,8 +23,7 @@
 
 
         <form action="php/login.php" method="POST">
-=======
-        <form action="" method="POST">
+
           <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
