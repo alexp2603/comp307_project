@@ -36,7 +36,6 @@ elseif($row_PASSWORD[0] == $password)
 	$row_NAME = $query_NAME->fetch_row();
 	$name = $row_NAME[0];
 
-<<<<<<< HEAD
 	$query_PHONE = mysqli_query($connect, "SELECT STUDENT_PHONE FROM students WHERE STUDENT_ID='$ID'");
 	$row_PHONE = $query_PHONE->fetch_row();
 	$phone = $row_PHONE[0];
@@ -49,10 +48,6 @@ elseif($row_PASSWORD[0] == $password)
 	$_SESSION['NAME'] = $name;
 	$_SESSION['PHONE'] = $phone;
 	$_SESSION['EMAIL'] = $email;
-=======
-	$_SESSION['ID'] = $ID;
-	$_SESSION['NAME'] = $name;
->>>>>>> 61745c823e9ff2178a97048225886de229ae7e21
 
 	header("Location: ../index.php");
 }

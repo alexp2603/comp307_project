@@ -22,15 +22,7 @@
       ?>
 
 
-<<<<<<< HEAD:signin.php
         <form action="php/login.php" method="POST">
-=======
-<<<<<<< HEAD:signin.php
-        <form action="php/login.php" method="POST">
-=======
-        <form action="" method="POST">
->>>>>>> 388efc0adb58d79da9cf3a6c5bcf3a0a5871d94e:signin.php
->>>>>>> 61745c823e9ff2178a97048225886de229ae7e21:signin.php
           <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
