@@ -85,129 +85,134 @@
 ?>
 
 <body>
+    <div class="container">
 
-<h1>Manage Account</h1>
-	<?php
-		echo("<p>Welcome to your accout, $name</p>");
-	?>
-
-
-
-<h2>Courses you can tutor</h2>
-
-<form action="php/updatecourses.php" method="POST">
-	<table style="width:50;">
-		
-			<tr>
-				<th></th>
-				<th>Current Course</th>
-				<th>New Course</th>
-			</tr>
-			<tr>
-				<th>Course 1</th>
-				<th><?php echo($course1); ?></th>
-				<th><?php echo($select_C1); ?></th>
-			</tr>
-			<tr>
-				<th>Course 2</th>
-				<th><?php echo($course2); ?></th>
-				<th><?php echo($select_C2); ?></th>
-			</tr>
-			<tr>
-				<th>Course 3</th>
-				<th><?php echo($course3); ?></th>
-				<th><?php echo($select_C3); ?></th>
-			</tr>
-			<tr>
-				<th>Course 4</th>
-				<th><?php echo($course4); ?></th>
-				<th><?php echo($select_C4); ?></th>
-			</tr>
-			<tr>
-				<th>Course 5</th>
-				<th><?php echo($course5); ?></th>
-				<th><?php echo($select_C5); ?></th>
-			</tr>
-	</table>	
-	<input type="submit" value="Submit Changes">
-</form>
-
-
-<h2>Student Information</h2>	
-<?php echo("Student e-mail: ".$_SESSION['EMAIL']."</br>");
-echo("Student phone: ".$_SESSION['PHONE']); ?>
-
-
-<h2>Engagements</h2>	
-
-
-<?php
-
-
-	if(mysqli_num_rows($results_tutor) <= 0 && mysqli_num_rows($results_student) <= 0)
-	{
-		echo("You have no engagements");
-	}
-	else
-	{
-		echo("<h3>Student Engagements</h3>");
-		if(mysqli_num_rows($results_student) > 0)
-		{
-			 while($row = mysqli_fetch_array($results_student))
-			 {
-			 	$message = "You are being tutored by ".$row['ENGAGEMENT_TUTORNAME']." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
-			 	echo($message);
-			 	echo("</br>");
-			 	echo("</br>");
-			 }
-		}
-		else
-		{
-		echo("You have no student engagements.");
-		}
-		echo("<h3>Tutoring Engagements</h3>");
-		if(mysqli_num_rows($results_tutor) > 0)
-		{
-			while($row = mysqli_fetch_array($results_tutor))
-			{
-
-				$student_name = 'an unknown person';
-				$result_findname = mysqli_query($connect, "SELECT ENGAGEMENT_STUDENT FROM engagements WHERE ENGAGEMENT_TUTOR = $ID ");
-				if(mysqli_num_rows($result_findname) > 0)
-				{
-					while($row_student = mysqli_fetch_array($result_findname))
-					{
-						$result_findid = $row_student['ENGAGEMENT_STUDENT'];
-						$query_studentname = "SELECT STUDENT_NAME from STUDENTS where STUDENT_ID =".$result_findid;
-
-						$result_studentname = mysqli_query($connect, $query_studentname);
-						if(mysqli_num_rows($result_studentname) > 0){
-							while($row_studentname = mysqli_fetch_array($result_studentname))
-							{
-								$student_name = $row_studentname['STUDENT_NAME'];
-							}
-						}
-					}
-				}
-
-				$message = "You are tutoring ".$student_name." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
-			 	echo($message);
-			 	echo("</br>");
-			 	echo("</br>");
-			}
-		}
-		else
-		{
-			echo("You have no tutor engagements.");
-		}
-	}
+        <h1>Manage Account</h1>
+            <?php
+                echo("<p>Welcome to your accout, $name</p>");
+            ?>
 
 
 
+        <h2>Courses you can tutor</h2>
 
-?>
+        <form action="php/updatecourses.php" method="POST">
+        <div class="table-responsive">          
+          <table class="table">
+              <thead>
+                <tr>
+                    <th>Current Course</th>
+                    <th>  </th>
+                    <th>New Course</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>Course 1</td>
+                    <td><?php echo($course1); ?></td>
+                    <td><?php echo($select_C1); ?></td>
+                </tr>
+                <tr>
+                    <td>Course 2</td>
+                    <td><?php echo($course2); ?></td>
+                    <td><?php echo($select_C2); ?></td>
+                </tr>
+                <tr>
+                    <td>Course 3</td>
+                    <td><?php echo($course3); ?></td>
+                    <td><?php echo($select_C3); ?></td>
+                </tr>
+                <tr>
+                    <td>Course 4</td>
+                    <td><?php echo($course4); ?></td>
+                    <td><?php echo($select_C4); ?></td>
+                </tr>
+                <tr>
+                    <td>Course 5</td>
+                    <td><?php echo($course5); ?></td>
+                    <td><?php echo($select_C5); ?></td>
+                </tr>
+              </tbody>
+            </table>	
+        </div>
+            <input type="submit" class="btn btn-default" value="Submit Changes">
+        </form>
 
 
+        <h2>Student Information</h2>	
+        <?php echo("Student e-mail: ".$_SESSION['EMAIL']."</br>");
+        echo("Student phone: ".$_SESSION['PHONE']); ?>
+
+
+        <h2>Engagements</h2>	
+
+
+        <?php
+
+
+            if(mysqli_num_rows($results_tutor) <= 0 && mysqli_num_rows($results_student) <= 0)
+            {
+                echo("You have no engagements");
+            }
+            else
+            {
+                echo("<h3>Student Engagements</h3>");
+                if(mysqli_num_rows($results_student) > 0)
+                {
+                     while($row = mysqli_fetch_array($results_student))
+                     {
+                        $message = "You are being tutored by ".$row['ENGAGEMENT_TUTORNAME']." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
+                        echo($message);
+                        echo("</br>");
+                        echo("</br>");
+                     }
+                }
+                else
+                {
+                echo("You have no student engagements.");
+                }
+                echo("<h3>Tutoring Engagements</h3>");
+                if(mysqli_num_rows($results_tutor) > 0)
+                {
+                    while($row = mysqli_fetch_array($results_tutor))
+                    {
+
+                        $student_name = 'an unknown person';
+                        $result_findname = mysqli_query($connect, "SELECT ENGAGEMENT_STUDENT FROM engagements WHERE ENGAGEMENT_TUTOR = $ID ");
+                        if(mysqli_num_rows($result_findname) > 0)
+                        {
+                            while($row_student = mysqli_fetch_array($result_findname))
+                            {
+                                $result_findid = $row_student['ENGAGEMENT_STUDENT'];
+                                $query_studentname = "SELECT STUDENT_NAME from STUDENTS where STUDENT_ID =".$result_findid;
+
+                                $result_studentname = mysqli_query($connect, $query_studentname);
+                                if(mysqli_num_rows($result_studentname) > 0){
+                                    while($row_studentname = mysqli_fetch_array($result_studentname))
+                                    {
+                                        $student_name = $row_studentname['STUDENT_NAME'];
+                                    }
+                                }
+                            }
+                        }
+
+                        $message = "You are tutoring ".$student_name." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
+                        echo($message);
+                        echo("</br>");
+                        echo("</br>");
+                    }
+                }
+                else
+                {
+                    echo("You have no tutor engagements.");
+                }
+            }
+
+
+
+
+        ?>
+    </div>
 
 </body>
 
