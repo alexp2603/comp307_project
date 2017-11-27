@@ -24,7 +24,7 @@ $app->post('/api/registerstudent', function($request) {
 
 	mysqli_query($connect, "INSERT INTO students(STUDENT_ID, STUDENT_NAME, STUDENT_PASSWORD, STUDENT_EMAIL, STUDENT_YEAROFSTUDY, STUDENT_PHONE) VALUES ('$id', '$name', '$password', '$email', '$year', '$phone')");
 
-	header("Location: http://localhost/comp307_project");
+	header("Location: ../../../index.php");
 	exit();
 
 });
