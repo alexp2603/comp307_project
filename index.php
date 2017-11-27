@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   </head>
-
+ 
 <body>
 
   <?php
-    include("header.php");
+    include("includes/header.php");
   ?>
 
   <div class="slideshow-container">
@@ -85,7 +85,7 @@
 
     <h3>MUS Tutors</h3>
 
-    <p class="footer-company-name">MUS Tutors &copy; 2017</p>
+    <p class="footer-company-name">Tutors &copy; 2017</p>
   </div>
 
   <div class="footer-center">
