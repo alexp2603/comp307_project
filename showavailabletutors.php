@@ -28,12 +28,13 @@ include("includes/header.php");
         while($row = mysqli_fetch_array($query))
         {
         	$id = $row['STUDENT_ID'];
+            $tutorname = $row['STUDENT_NAME'];
         	echo("<tr>");
         	echo("<th>".$row['STUDENT_NAME']."</th>");
         	echo("<th>".$row['STUDENT_YEAROFSTUDY']."</th>");
         	echo("<th>".$row['STUDENT_PHONE']."</th>");
         	echo("<th>".$row['STUDENT_EMAIL']."</th>");
-        	echo("<th><a href='book.php?id=$id&course=$course'>Book an engagement with ".$row['STUDENT_NAME']."</a></th>");
+        	echo("<th><a href='book.php?id=$id&course=$course&tutorname=$tutorname'>Book an engagement with ".$row['STUDENT_NAME']."</a></th>");
         	echo("</tr>");
         }
         echo("</table>");

@@ -6,6 +6,7 @@ include("includes/header.php");
 
 $id_tutor = $_GET['id'];
 $course = $_GET['course'];
+$tutorname = $_GET['tutorname'];
 
 $connect = mysqli_connect("localhost", "root", "", "tutor");
 if (!$connect) {
