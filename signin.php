@@ -1,24 +1,10 @@
 <html>
-    <head>
-        <!-- Latest compiled and minified CSS -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>MUS Tutors</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/signinstyles.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="signinstyles.css">
-    </head>
 
     <body>
 
       <?php
-        include("header.php");
+        include("includes/header.php");
+        include("includes/head.html");
       ?>
 
 
@@ -45,52 +31,9 @@
           </div>
         </form>
 
-        <footer class="footer-distributed">
-
-          <div class="footer-left">
-
-            <h3>MUS Tutors</h3>
-
-            <p class="footer-company-name">MUS Tutors &copy; 2017</p>
-          </div>
-
-          <div class="footer-center">
-
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p><span>845 Sherbrooke St W</span> Montreal, Quebec</p>
-            </div>
-
-            <div>
-              <i class="fa fa-phone"></i>
-              <p>+1 514-123-4567</p>
-            </div>
-
-            <div>
-              <i class="fa fa-envelope"></i>
-              <p><a href="mailto:info@mustutors.com">info@mustutors.com</a></p>
-            </div>
-
-          </div>
-
-          <div class="footer-right">
-
-            <p class="footer-company-about">
-              <span>About the company</span>
-              MUS Tutors is a student-run initiative that aims to connect like-minded students.
-
-            <div class="footer-icons">
-
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
-
-            </div>
-
-          </div>
-
-        </footer>
+        <?php
+        include("includes/footer.php");
+      ?>
 
     </body>
 </html>

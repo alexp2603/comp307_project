@@ -1,8 +1,10 @@
-<html>
-
 <?php
         session_start();
+        include("head.html");
 ?>
+
+
+
 
   <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
