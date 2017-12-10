@@ -9,6 +9,8 @@
     <link href="css/signupstyles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="js/formvalidation.js"></script>
+
   </head>
       <body>
           <?php
@@ -16,7 +18,7 @@
             include("includes/head.html");
           ?>
 
-        <form action="php/index.php/api/registerstudent" method="POST">
+        <form name="signupForm"  onsubmit="return validate()" action="php/index.php/api/registerstudent"  method="POST" >
           <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
@@ -28,7 +30,7 @@
                         <label><b>Student ID<span style="color:red">*</span></b></label>
                         <input type="text" placeholder="Student ID" name="STUDENT_ID" required>
 
-                        <label><b>Full Name<span style="color:red">*</span></b></label>
+                        <label><b>First Name<span style="color:red">*</span></b></label>
                         <input type="text" placeholder="First Name" name="STUDENT_NAME" required>
 
                         <label><b>Password<span style="color:red">*</span></b></label>
@@ -48,7 +50,7 @@
                         <input type="text" placeholder="Enter Email" name="STUDENT_EMAIL" required>
 
                         <label><b>Phone Number</b></label>
-                        <input type="text" placeholder="Phone Number" name="STUDENT_PHONE">
+                        <input type="text" placeholder="Phone Number (***)***-****" name="STUDENT_PHONE">
 
                         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                         <button type="submit" class="signupbtn">Sign Up</button>
@@ -68,4 +70,15 @@
         </html>
 
     </body>
+
+    <script>
+        function validateForm()
+        {
+            alert("Hello");
+        }
+
+
+    </script>
+
+
 </html>
