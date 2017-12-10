@@ -20,12 +20,25 @@ $app->post('/api/registerstudent', function($request) {
 	$email = $_POST['STUDENT_EMAIL'];
 	$year = $_POST['STUDENT_YEAROFSTUDY'];	
 	$phone = $_POST['STUDENT_PHONE'];	
-			
 
-	mysqli_query($connect, "INSERT INTO students(STUDENT_ID, STUDENT_NAME, STUDENT_PASSWORD, STUDENT_EMAIL, STUDENT_YEAROFSTUDY, STUDENT_PHONE) VALUES ('$id', '$name', '$password', '$email', '$year', '$phone')");
+	$query_STUDENTID = mysqli_query($connect, "SELECT count(*) FROM STUDENTS WHERE STUDENT_ID = $id");
+    $row_STUDENTID = $query_STUDENTID->fetch_row();
+    $numberID = $row_STUDENTID[0];
 
-	header("Location: ../../../index.php");
-	exit();
+
+	if($numberID>0)
+	{
+		echo("Student ID already registered. Please register with a unique Student ID");
+		echo("</br>");
+		echo("<a href='../../../index.php'>Go back to main page</a>");
+
+	}
+	else
+	{
+		mysqli_query($connect, "INSERT INTO students(STUDENT_ID, STUDENT_NAME, STUDENT_PASSWORD, STUDENT_EMAIL, STUDENT_YEAROFSTUDY, STUDENT_PHONE) VALUES ('$id', '$name', '$password', '$email', '$year', '$phone')");
+		header("Location: ../../../index.php");
+		exit();
+	}	
 
 });
 
