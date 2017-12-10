@@ -15,7 +15,7 @@ if (!$connect) {
 	echo("Connection failed: " . mysqli_connect_error());
 };
 
-$query = "INSERT INTO engagements(ENGAGEMENT_STUDENT, ENGAGEMENT_TUTOR, ENGAGEMENT_DATETIME, ENGAGEMENT_LOCATION, ENGAGEMENT_DURATION, ENGAGEMENT_FEE, ENGAGEMENT_COURSEID, ENGAGEMENT_TUTORNAME) VALUES ('$student_id', '$tutor_id', '$datetime', '$location', '$duration', '$fee', '$course', '$tutor_name')";
+$query = "INSERT INTO engagements(ENGAGEMENT_STUDENT, ENGAGEMENT_TUTOR, ENGAGEMENT_DATETIME, ENGAGEMENT_LOCATION, ENGAGEMENT_DURATION, ENGAGEMENT_FEE, ENGAGEMENT_COURSEID, ENGAGEMENT_TUTORNAME,ENGAGEMENT_ACCEPTED) VALUES ('$student_id', '$tutor_id', '$datetime', '$location', '$duration', '$fee', '$course', '$tutor_name',0)";
 
 mysqli_query($connect, $query);
 

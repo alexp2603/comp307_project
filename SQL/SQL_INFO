@@ -1,42 +1,136 @@
 SQL CODE REQUIRED TO GENERATE TABLES AND DATABASE
 
-create table STUDENTS(
-    STUDENT_ID int not null primary key,
-    STUDENT_NAME varchar(255),
-    STUDENT_PASSWORD varchar(255),
-    STUDENT_EMAIL varchar(255),
-    STUDENT_YEAROFSTUDY enum('U0','U1','U2','U3','U3+'),
-    STUDENT_PHONE varchar(255),
-    STUDENT_COURSE1 varchar(255),
-    STUDENT_COURSE2 varchar(255),
-    STUDENT_COURSE3 varchar(255),
-    STUDENT_COURSE4 varchar(255),
-    STUDENT_COURSE5 varchar(255),
 
-    foreign key(STUDENT_COURSE1) references COURSES(COURSE_ID),
-    foreign key(STUDENT_COURSE2) references COURSES(COURSE_ID),
-    foreign key(STUDENT_COURSE3) references COURSES(COURSE_ID),
-    foreign key(STUDENT_COURSE4) references COURSES(COURSE_ID),
-    foreign key(STUDENT_COURSE5) references COURSES(COURSE_ID)
-);
+--
+-- Table structure for table `courses`
+--
 
-create table COURSES(
-    COURSE_ID varchar(255) not null primary key
-);
+CREATE TABLE `courses` (
+  `COURSE_ID` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `courses`
+--
 
-create table ENGAGEMENTS(
-    ENGAGEMENT_ID int auto_increment primary key,
-    ENGAGEMENT_STUDENT int,
-    ENGAGEMENT_TUTOR int,
-    ENGAGEMENT_DATETIME datetime, 
-    ENGAGEMENT_DURATION int, #number of minutes
-    ENGAGEMENT_LOCATION varchar(255),
-    ENGAGEMENT_FEE int,
-    ENGAGEMENT_COURSEID int,
+INSERT INTO `courses` (`COURSE_ID`) VALUES
+('BUSA 150'),
+('BUSA 307'),
+('BUSA 499'),
+('COMP 202'),
+('COMP 303'),
+('FINE 151');
 
-    foreign key(ENGAGEMENT_STUDENT) references STUDENTS(STUDENT_ID);
-    foreign key(ENGAGEMENT_TUTOR) references STUDENTS(STUDENT_ID);
-    foreign key(ENGAGEMENT_COURSEID) references COURSES(COURSE_ID);
-    
-);
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `engagements`
+--
+
+CREATE TABLE `engagements` (
+  `ENGAGEMENT_ID` int(11) NOT NULL,
+  `ENGAGEMENT_STUDENT` int(11) DEFAULT NULL,
+  `ENGAGEMENT_TUTOR` int(11) DEFAULT NULL,
+  `ENGAGEMENT_DATETIME` datetime DEFAULT NULL,
+  `ENGAGEMENT_DURATION` int(11) DEFAULT NULL,
+  `ENGAGEMENT_LOCATION` varchar(255) DEFAULT NULL,
+  `ENGAGEMENT_FEE` int(11) DEFAULT NULL,
+  `ENGAGEMENT_COURSEID` varchar(255) DEFAULT NULL,
+  `ENGAGEMENT_TUTORNAME` varchar(255) DEFAULT NULL,
+  `ENGAGEMENT_ACCEPTED` bit(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+CREATE TABLE `students` (
+  `STUDENT_ID` int(11) NOT NULL,
+  `STUDENT_NAME` varchar(255) DEFAULT NULL,
+  `STUDENT_PASSWORD` varchar(255) DEFAULT NULL,
+  `STUDENT_EMAIL` varchar(255) DEFAULT NULL,
+  `STUDENT_YEAROFSTUDY` enum('U0','U1','U2','U3','U3+') DEFAULT NULL,
+  `STUDENT_PHONE` varchar(255) DEFAULT NULL,
+  `STUDENT_COURSE1` varchar(255) DEFAULT NULL,
+  `STUDENT_COURSE2` varchar(255) DEFAULT NULL,
+  `STUDENT_COURSE3` varchar(255) DEFAULT NULL,
+  `STUDENT_COURSE4` varchar(255) DEFAULT NULL,
+  `STUDENT_COURSE5` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`STUDENT_ID`, `STUDENT_NAME`, `STUDENT_PASSWORD`, `STUDENT_EMAIL`, `STUDENT_YEAROFSTUDY`, `STUDENT_PHONE`, `STUDENT_COURSE1`, `STUDENT_COURSE2`, `STUDENT_COURSE3`, `STUDENT_COURSE4`, `STUDENT_COURSE5`) VALUES
+(260634017, 'Alexandre', 'hello123', 'alexandre.perron@mail.mcgill.ca', 'U3', '(514)625-0454', 'BUSA 150', 'BUSA 307', 'BUSA 499', 'COMP 202', 'COMP 303'),
+(260634018, 'Jack', 'hello123', 'jack@mail.mcgill.ca', 'U3', '(615)453-3456', NULL, NULL, NULL, NULL, NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `courses`
+--
+ALTER TABLE `courses`
+  ADD PRIMARY KEY (`COURSE_ID`);
+
+--
+-- Indexes for table `engagements`
+--
+ALTER TABLE `engagements`
+  ADD PRIMARY KEY (`ENGAGEMENT_ID`),
+  ADD KEY `ENGAGEMENT_STUDENT` (`ENGAGEMENT_STUDENT`),
+  ADD KEY `ENGAGEMENT_TUTOR` (`ENGAGEMENT_TUTOR`),
+  ADD KEY `ENGAGEMENT_COURSEID` (`ENGAGEMENT_COURSEID`);
+
+--
+-- Indexes for table `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`STUDENT_ID`),
+  ADD KEY `STUDENT_COURSE1` (`STUDENT_COURSE1`),
+  ADD KEY `STUDENT_COURSE2` (`STUDENT_COURSE2`),
+  ADD KEY `STUDENT_COURSE3` (`STUDENT_COURSE3`),
+  ADD KEY `STUDENT_COURSE4` (`STUDENT_COURSE4`),
+  ADD KEY `STUDENT_COURSE5` (`STUDENT_COURSE5`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `engagements`
+--
+ALTER TABLE `engagements`
+  MODIFY `ENGAGEMENT_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `engagements`
+--
+ALTER TABLE `engagements`
+  ADD CONSTRAINT `engagements_ibfk_1` FOREIGN KEY (`ENGAGEMENT_STUDENT`) REFERENCES `students` (`STUDENT_ID`),
+  ADD CONSTRAINT `engagements_ibfk_2` FOREIGN KEY (`ENGAGEMENT_TUTOR`) REFERENCES `students` (`STUDENT_ID`),
+  ADD CONSTRAINT `engagements_ibfk_3` FOREIGN KEY (`ENGAGEMENT_COURSEID`) REFERENCES `courses` (`COURSE_ID`);
+
+--
+-- Constraints for table `students`
+--
+ALTER TABLE `students`
+  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`STUDENT_COURSE1`) REFERENCES `courses` (`COURSE_ID`),
+  ADD CONSTRAINT `students_ibfk_2` FOREIGN KEY (`STUDENT_COURSE2`) REFERENCES `courses` (`COURSE_ID`),
+  ADD CONSTRAINT `students_ibfk_3` FOREIGN KEY (`STUDENT_COURSE3`) REFERENCES `courses` (`COURSE_ID`),
+  ADD CONSTRAINT `students_ibfk_4` FOREIGN KEY (`STUDENT_COURSE4`) REFERENCES `courses` (`COURSE_ID`),
+  ADD CONSTRAINT `students_ibfk_5` FOREIGN KEY (`STUDENT_COURSE5`) REFERENCES `courses` (`COURSE_ID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
