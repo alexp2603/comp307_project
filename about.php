@@ -1,13 +1,13 @@
 <html>
     <head>
-        <link href="css/style.css" rel="stylesheet">
         <link href="css/coursesstyles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href='https://fonts.googleapis.com/css?family=Lato:500' rel='stylesheet' type='text/css'>
-        <link  href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     
     <body>        
@@ -15,42 +15,23 @@
         <div class="intro-header">
 
         <?php
-            include("header.php");
+            include("includes/header.php");
         ?>
-
-                <div class="intro-message">
-                    <h1>About</h1>
-                    <br>
-                    <br>
-                    <h3>Find the help you need for the courses offered at McGill University.</h3>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="icons col-xs-6 col-sm-offset-2 col-sm-2" style="padding-right: 10px;">
-                            <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"><h5>Over 20 qualified Tutors</h5></i>
-                        </div>
-                        <div class="icons col-xs-6 col-sm-2">
-                            <i class="fa fa-usd fa-2x" aria-hidden="true"><h5>Affordable rates</h5></i>
-                        </div>
-                        <div class="icons col-xs-6 col-sm-2"> 
-                            <i class="fa fa-star fa-2x" aria-hidden="true"><h5>Rating system for accountability</h5></i>
-                        </div>
-                        <div class="icons col-xs-12 col-sm-2"> 
-                            <i class="fa fa-line-chart fa-2x" aria-hidden="true"><h5> Improved grades</h5></i>
-                        </div>
-                    </div>                    
-                </div>
-            <div id="arrow-down">
-                <a href="#about-me"><i style="color: black;" class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
-            </div>
+        <div class = "image">
+          <img src="img/aboutus.jpg" alt="aboutUs" style="width:1393px;height:750px;">
+          <h1><span>About Us</span></h1>
+          <h2><span>Find the help you need for the courses offered at McGill University.</span></h2>
         </div>
+               
+            <div id="arrow-down">
+                <a href="#about-me"><i style="color: white;" class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
+            </div>
+        </div>           
         
         <!-- About me Page -->
         <div class="courses" id="about-me">
             <div class="container">
-                <h3 class="text-center">Courses Offered</h3>
+                <h3 class="text-center" style="padding-top: 50px; font-size: 35; padding-bottom: 20px">Courses Offered</h3>
                 <div class="courses-text-box">
                     <p>MUS Tutoring currently offers help with over 20 courses at McGill University, and is growing each day! Our tutors have each personally taken the course they are tutoring, and received a minimum grade of A-.</p>
                     <ul class="courses-list">
@@ -89,7 +70,7 @@
 
           <div class="footer-left">
 
-            <h3>Tutors</h3>
+            <h3>Tutor</h3>
 
             <p class="footer-company-name">Tutors &copy; 2017</p>
           </div>
@@ -117,16 +98,9 @@
 
             <p class="footer-company-about">
               <span>About the company</span>
-              MUS Tutors is a student-run initiative that aims to connect like-minded students.
+              Tutor is a student-run initiative that aims to connect like-minded students.
 
-            <div class="footer-icons">
-
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
-
-            </div>
+    
 
           </div>
 

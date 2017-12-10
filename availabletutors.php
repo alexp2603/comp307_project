@@ -1,9 +1,3 @@
-<?php
-
-include("includes/header.php");
-include("includes/head.html");
-
-?>
 
 <html>
 
@@ -11,20 +5,31 @@ include("includes/head.html");
 <head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="typeahead.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
  </head>
 
+<?php
+
+include("includes/header.php");
+include("includes/head.html");
+
+?>
 
 
 
  <body>
- 	<h1>Search for class</h1>
+ <font size="6" style="font-family: 'Montserrat', sans-serif"><center>Search For a Class</center></font>
+ 
+
     <div class="content">
+        <div class = "searchBar"><input type="text" name="course" id="course" autocomplete="off"></div>
     <form action="showavailabletutors.php" method="POST">
-             <input type="text" name="course" id="course">
              <div id="output"></div>
-             <input type="submit" value="Search for class">
+             <br></br>
+             <div class = "submit"> <input type="submit" value="Search for class"></div>
     </form>
     </div>
+
 </body>
 
 </html>

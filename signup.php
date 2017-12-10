@@ -24,7 +24,7 @@
                 <div class="col-xs-offset-4 col-xs-4">
                     <div class="border">
                         <div class="header">
-                            <h2 style="padding-bottom: 20px">Create an account</h2>
+                            <font size="6" style="padding-bottom: 20px"><b>Create an Account</b></font>
                         </div>
 
                         <label><b>Student ID<span style="color:red">*</span></b></label>
