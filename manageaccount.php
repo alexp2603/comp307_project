@@ -46,6 +46,9 @@
 	$row_COURSE5 = $query_COURSE5->fetch_row();
 	$course5 = $row_COURSE5[0];
 
+    $query_COUNTPENDING = mysqli_query($connect, "SELECT count(*) FROM ENGAGEMENTS WHERE ENGAGEMENT_ACCEPTED = 0 AND ENGAGEMENT_TUTOR = $ID");
+    $row_COUNTPENDING = $query_COUNTPENDING->fetch_row();
+    $numberPending = $row_COUNTPENDING[0];
 
 
 	//Creates select table for php
@@ -65,22 +68,12 @@
 	$select_C5 = "<select name='course5'>".$options."</select>";
 
 
-	$query_studentengagements = "SELECT * FROM engagements WHERE engagement_student = $ID";
+	$query_studentengagements = "SELECT * FROM engagements WHERE engagement_student = $ID AND engagement_accepted > 0";
 	$results_student = mysqli_query($connect, $query_studentengagements );
 
 
-	$query_tutorengagements = "SELECT * FROM engagements WHERE engagement_tutor = $ID";
+	$query_tutorengagements = "SELECT * FROM engagements WHERE engagement_tutor = $ID AND engagement_accepted > 0";
 	$results_tutor = mysqli_query($connect, $query_tutorengagements);
-
-
-
-
-
-
-
-
-
-
 
 ?>
 
@@ -93,6 +86,9 @@
             ?>
 
 
+        <h2>Student Information</h2>    
+        <?php echo("Student e-mail: ".$_SESSION['EMAIL']."</br>");
+        echo("Student phone: ".$_SESSION['PHONE']); ?>
 
         <h2>Courses you can tutor</h2>
 
@@ -139,9 +135,12 @@
         </form>
 
 
-        <h2>Student Information</h2>	
-        <?php echo("Student e-mail: ".$_SESSION['EMAIL']."</br>");
-        echo("Student phone: ".$_SESSION['PHONE']); ?>
+        <!-- Manage Pending Requests --> 
+        <a href="managepending.php">
+            <div id="requests" >
+                <p>You have <?php echo($numberPending)  ?> engagement requests </p>
+            </div>
+        </a>
 
 
         <h2>Engagements</h2>	
@@ -163,6 +162,8 @@
                      {
                         $message = "You are being tutored by ".$row['ENGAGEMENT_TUTORNAME']." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
                         echo($message);
+                        $row_engagementID = $row['ENGAGEMENT_ID'];
+                        echo("<a class='delete-btn' href='php/deleteengagement.php?course=$row_engagementID'>Delete Engagement</a>");
                         echo("</br>");
                         echo("</br>");
                      }
@@ -196,8 +197,11 @@
                             }
                         }
 
-                        $message = "You are tutoring ".$student_name." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
+
+                        $message = "You are tutoring ".$student_name." in ".$row['ENGAGEMENT_COURSEID']." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
                         echo($message);
+                        $row_engagementID = $row['ENGAGEMENT_ID'];
+                        echo("<a class='delete-btn' href='php/deleteengagement.php?course=$row_engagementID'>Delete Engagement</div>");
                         echo("</br>");
                         echo("</br>");
                     }
