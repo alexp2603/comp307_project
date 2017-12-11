@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href="css/style.css" rel="stylesheet">
+
     </head>
     
     <body>        
@@ -66,45 +66,10 @@
         
         
         
-<footer class="footer-distributed">
+<?php
 
-          <div class="footer-left">
-
-            <h3>Tutor</h3>
-
-            <p class="footer-company-name">Tutors &copy; 2017</p>
-          </div>
-
-          <div class="footer-center">
-
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p><span>845 Sherbrooke St W</span> Montreal, Quebec</p>
-            </div>
-
-            <div>
-              <i class="fa fa-phone"></i>
-              <p>+1 514-123-4567</p>
-            </div>
-
-            <div>
-              <i class="fa fa-envelope"></i>
-              <p><a href="mailto:info@mustutors.com">info@mustutors.com</a></p>
-            </div>
-
-          </div>
-
-          <div class="footer-right">
-
-            <p class="footer-company-about">
-              <span>About the company</span>
-              Tutor is a student-run initiative that aims to connect like-minded students.
-
-    
-
-          </div>
-
-        </footer>
+    include("includes/footer.php");
+    ?>
         
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

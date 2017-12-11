@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tutor</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-      <link href="css/style.css" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+       <link href="css/style.css" rel="stylesheet">
   </head>
  
 <body>
 
   <?php
+
     include("includes/header.php");
   ?>
 
@@ -23,7 +22,7 @@
       <img src="img/image_1.jpg" style="width:100%;">
       <div class="text" style="padding-bottom: 200px">Classes Shouldn't Be This Hard.</div>
       <div class="captiontext" style="padding-bottom: 200px">Having trouble in a class? We're here to help.</div>
-      <p><a class="btn btn-primary btn-lg" href="signup.html" role="button">Sign Up »</a>
+      <p><a class="btn btn-primary btn-lg" href="signup.php" role="button">Sign Up »</a>
     </div>
 
     <div class="mySlides fade">
@@ -31,7 +30,7 @@
       <img src="img/image_2.jpg" style="width:100%">
       <div class="text" style="padding-bottom: 200px">Learn With Confidence.</div>
       <div class="captiontext" style="padding-bottom: 200px">Helping students achieve success.</div>
-      <p><a class="btn btn-primary btn-lg" href="signup.html" role="button">Sign Up »</a> </p>
+      <p><a class="btn btn-primary btn-lg" href="signup.php" role="button">Sign Up »</a> </p>
     </div>
 
     <div class="mySlides fade">
@@ -39,11 +38,9 @@
       <img src="img/image_3.jpg" style="width:100%">
       <div class="text" style="padding-bottom: 200px">Discover Your Curiosity.</div>
       <div class="captiontext" style="padding-bottom: 200px">Learning has never been so easy.</div>
-      <p><a class="btn btn-primary btn-lg" href="sighup.html" role="button">Sign Up »</a> </p>
+      <p><a class="btn btn-primary btn-lg" href="sighup.php" role="button">Sign Up »</a> </p>
     </div>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
 
@@ -101,46 +98,9 @@
 </div>
 
 
-<footer class="footer-distributed">
-
-          <div class="footer-left">
-
-            <h3>Tutor</h3>
-
-            <p class="footer-company-name">Tutors &copy; 2017</p>
-          </div>
-
-          <div class="footer-center">
-
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p><span>845 Sherbrooke St W</span> Montreal, Quebec</p>
-            </div>
-
-            <div>
-              <i class="fa fa-phone"></i>
-              <p>+1 514-123-4567</p>
-            </div>
-
-            <div>
-              <i class="fa fa-envelope"></i>
-              <p><a href="mailto:info@mustutors.com">info@mustutors.com</a></p>
-            </div>
-
-          </div>
-
-          <div class="footer-right">
-
-            <p class="footer-company-about">
-              <span>About the company</span>
-              Tutor is a student-run initiative that aims to connect like-minded students.
-
-    
-
-          </div>
-
-        </footer>
-        
+<?php
+  include("includes/footer.php");
+  ?>
 
 </body>
 </html>
