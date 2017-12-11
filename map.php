@@ -1,11 +1,10 @@
 <?php
 
-include("includes/head.html");
-include("includes/header.php");
+//include("includes/header.php");
 
 
-$name = $_SESSION['NAME'];
-$ID = $_SESSION['ID'];
+//$name = $_SESSION['NAME'];
+//$ID = $_SESSION['ID'];
 
 $connect = mysqli_connect("localhost", "root", "", "tutor");
 if (!$connect) {
@@ -46,7 +45,7 @@ else
 
 <html>
 
-<h1> Your engagements </h1>
+<h1 style="text-align:center;"> Your Engagement Map </h1>
 
 
   <body>
@@ -191,5 +190,5 @@ else
 </html>
 
 <?php
-include("includes/footer.php");
+//include("includes/footer.php");
 ?>
