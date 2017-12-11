@@ -9,7 +9,8 @@
        <link href="css/manageaccountstyles.css" rel="stylesheet">
     </head>
 
-
+      <br></br>
+                        <br></br>
 <?php
 
 	include("includes/header.php");
