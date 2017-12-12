@@ -1,5 +1,6 @@
 <?php
 
+//include("includes/head.html");
 //include("includes/header.php");
 
 
@@ -45,7 +46,7 @@ else
 
 <html>
 
-<h1 style="text-align:center;"> Your Engagement Map </h1>
+<h1> Your engagements </h1>
 
 
   <body>
