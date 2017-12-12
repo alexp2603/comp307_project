@@ -4,77 +4,20 @@
 	margin-bottom: 0;
 }
 
-
 body {
 	background: white;
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 }
-
-
-h1 {
-	position: absolute;
-	top: 200px;
-	text-align: center;
-	width: 100%;
-	font-weight: bold;
-}
-
-h1 span {
-	color: white;
-	font-family: 'Montserrat', sans-serif;
-  	font-weight: bold;
-	letter-spacing: -1px;
-	padding: 10px;
-}
-
+h1,
 h2 {
-	position: absolute;
-	top: 400px;
-	text-align: center;
-	width: 100%;
 	font-weight: bold;
 }
-
-
-h2 span {
-	color: white;
-	font-family: 'Montserrat', sans-serif;
-  	font-weight: bold;
-	letter-spacing: -1px;
-	padding: 10px;
-}
-
-h3 {
-	font-family: 'Montserrat', sans-serif;
-}
-
 p {
 	font-size: 16px;
 	color: black;
 }
 
-.search {
-	text-align: left;
-}
-.content {
-	text-align: center;
-}
-
-.searchBar {
- 	text-align: center;
- 	padding-top: 10px;
- 	padding-bottom: 20px;
-}
-
-.searchBar input {
-	height: 30px;
-	width: 300px;
-}
-
-.submit {
-	text-align: center;
-}
 .call-to-action {
 	text-align: center;
 }
@@ -95,7 +38,7 @@ p {
 	background: white;
 	color: white;
 	text-align: left;
-  min-height: 750px;
+  min-height: 600px;
 }
 .jumbotron p {
 	color: white;
@@ -355,7 +298,7 @@ html {
 .btn-primary {
 	color: #fff;
   position: absolute;
-  bottom: 350px;
+  bottom: 250px;
   text-align: left;
 	border-color: black;
   margin-top: 0px;
