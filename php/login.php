@@ -10,17 +10,11 @@ if (!$connect) {
 $ID = $_POST["login_ID"];
 $password = $_POST["login_password"];
 
-// encryption
-$string_to_encrypt=$password;
-$key="key123";
-$encrypted_string = openssl_encrypt($string_to_encrypt,"AES-128-ECB",$key);
-
 if($ID=='' || $password =='')
 {
 	echo("Empty field");
 	die();
 }
-
 
 $query_ID = mysqli_query($connect, "SELECT STUDENT_ID FROM students WHERE STUDENT_ID='$ID'");
 $query_PASSWORD = mysqli_query($connect, "SELECT STUDENT_PASSWORD FROM students WHERE STUDENT_ID='$ID'");
@@ -35,7 +29,7 @@ if($row_ID[0] == '0' || $row_PASSWORD[0] =='0')
 	echo("Please submit both your ID and password");
 }
 
-elseif($row_PASSWORD[0] == $encrypted_string)
+elseif($row_PASSWORD[0] == $password)
 {
 
 	$query_NAME = mysqli_query($connect, "SELECT STUDENT_NAME FROM students WHERE STUDENT_ID='$ID'");
