@@ -134,8 +134,6 @@
 
 
         <?php
-
-
             if(mysqli_num_rows($results_tutor) <= 0 && mysqli_num_rows($results_student) <= 0)
             {
                 echo("You have no engagements");
@@ -184,6 +182,10 @@
 
                         $message = "You are tutoring ".$student_name." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
                         echo($message);
+
+                        $row_engagementID = $row['ENGAGEMENT_ID'];
+                        echo("<a class='delete-btn' href='php/deleteengagement.php?course=$row_engagementID'>Delete Engagement</a>");
+
                         echo("</br>");
                         echo("</br>");
                     }
@@ -193,12 +195,11 @@
                     echo("You have no tutor engagements.");
                 }
             }
-
-
-
-
         ?>
     </div>
+
+
+
 
 </body>
 
@@ -206,7 +207,7 @@
 </html>
 
 <?php
-
+    include("map.php");
 	include("includes/footer.php");
 ?>
 
