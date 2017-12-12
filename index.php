@@ -17,11 +17,13 @@
     include("includes/header.php");
   ?>
 
+  <br>
+  <br>
   <div class="slideshow-container">
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
       <img src="img/slide_2.jpg" style="width:100%">
-      <div class="text">Classes Shouldn't Be This Hard.</div>
+      <div class="text" >Classes Shouldn't Be This Hard.</div>
       <div class="captiontext">Having trouble in a class? We're here to help.</div>
       <p><a class="btn btn-primary btn-lg" href="signup.html" role="button">Sign Up »</a>
     </div>
@@ -41,9 +43,6 @@
       <div class="captiontext">Having trouble in a class? We're here to help.</div>
       <p><a class="btn btn-primary btn-lg" href="sighup.html" role="button">Sign Up »</a> </p>
     </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
 
@@ -56,6 +55,7 @@
 
 </div>
 
+<br></br>
 <div class="container">
   <section class="call-to-action">
   	<div class="row">
@@ -78,53 +78,31 @@
   </section>
 </div>
 
-
-<footer class="footer-distributed">
-
-  <div class="footer-left">
-
-    <h3>MUS Tutors</h3>
-
-    <p class="footer-company-name">Tutors &copy; 2017</p>
-  </div>
-
-  <div class="footer-center">
-
-    <div>
-      <i class="fa fa-map-marker"></i>
-      <p><span>845 Sherbrooke St W</span> Montreal, Quebec</p>
+<div class="container">
+  <section class="call-to-action">
+    <div class="row">
+      <div class="col-md-4">
+        <i class="material-icons" style="padding-top: 80px; font-size:100px;">group_add</i>
+        <h3>Over 20 Qualified Tutors</h3>
+        <p>We have a large team of tutors, ready to assist you with any course you have in mind.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="material-icons" style="padding-top: 80px; font-size:100px;">attach_money</i>
+        <h3>Affordable Rates</h3>
+        <p>Get the most out of your money with our low prices.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="material-icons" style="padding-top: 80px; font-size:100px;">beenhere</i>
+        <h3>Improved Grades</h3>
+        <p>We guarentee that you will see the difference in your grade.</p>
+      </div>
     </div>
+  </section>
+</div>
 
-    <div>
-      <i class="fa fa-phone"></i>
-      <p>+1 514-123-4567</p>
-    </div>
-
-    <div>
-      <i class="fa fa-envelope"></i>
-      <p><a href="mailto:info@mustutors.com">info@mustutors.com</a></p>
-    </div>
-
-  </div>
-
-  <div class="footer-right">
-
-    <p class="footer-company-about">
-      <span>About the company</span>
-      MUS Tutors is a student-run initiative that aims to connect like-minded students.
-
-    <div class="footer-icons">
-
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
-
-    </div>
-
-  </div>
-
-</footer>
+<?php
+  include("includes/footer.php");
+  ?>
 
 </body>
 </html>

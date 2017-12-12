@@ -18,6 +18,9 @@
             include("includes/head.html");
           ?>
 
+          
+  <br>
+  <br>
         <form name="signupForm"  onsubmit="return validate()" action="php/index.php/api/registerstudent"  method="POST" >
           <div class="container-fluid">
             <div class="row">

@@ -11,17 +11,28 @@ include("includes/head.html");
 <head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="typeahead.min.js"></script>
+    <style type="text/css">
+    .content {
+        text-align: center;
+    }
+    </style>
  </head>
 
 
 
 
  <body>
- 	<h1>Search for class</h1>
+
+  <br>
+  <br>
+  <br>
+ 	<h1 style="text-align: center;">Search for Class</h1>
     <div class="content">
     <form action="showavailabletutors.php" method="POST">
-             <input type="text" name="course" id="course">
+       <br>
+             <input type="text" name="course" id="course" autocomplete="off">
              <div id="output"></div>
+             <br>
              <input type="submit" value="Search for class">
     </form>
     </div>
