@@ -18,13 +18,14 @@
 include("includes/head.html");
 include("includes/header.php");
 ?>
-
+      <br></br>
+                        <br></br>
 
 <div class="container">
             <?php
 
                 $course = $_POST['course'];
-                echo("<h2>Available $course Tutors</h2>");
+                echo("<font size='5'>Available $course Tutors</font>");
 
             	$connect = mysqli_connect("localhost", "root", "", "tutor");
             	if (!$connect) {

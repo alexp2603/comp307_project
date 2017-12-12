@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MUS Tutors</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/signupstyles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -15,16 +14,17 @@
       <body>
           <?php
             include("includes/header.php");
-            include("includes/head.html");
           ?>
 
+                        <br></br>
+                        <br></br>
         <form name="signupForm"  onsubmit="return validate()" action="php/index.php/api/registerstudent"  method="POST" >
           <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
                     <div class="border">
                         <div class="header">
-                            <h2 style="padding-bottom: 20px">Create an account</h2>
+                            <font size="6" style="padding-bottom: 20px"><b>Create an Account</b></font>
                         </div>
 
                         <label><b>Student ID<span style="color:red">*</span></b></label>
@@ -54,13 +54,15 @@
 
                         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                         <button type="submit" class="signupbtn">Sign Up</button>
-
+      <br></br>
+                        <br></br>
                     </div>
                 </div>
               </div>
           </div>
         </form>
 
+            
         <?php
             include("includes/footer.php");
         ?>
