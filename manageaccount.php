@@ -16,7 +16,7 @@
 
 <?php
 
-	include("includes/head.html");
+    include("includes/head.html");
 	include("includes/header.php");
 
 	$connect = mysqli_connect("localhost", "root", "", "tutor");
@@ -79,11 +79,14 @@
 ?>
 
 <body>
+
+  <br>
+  <br>
     <div class="container">
 
         <h1>Manage Account</h1>
             <?php
-                echo("<p>Welcome to your accout, $name</p>");
+                echo("<p>Welcome to your account, $name</p>");
             ?>
 
 

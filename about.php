@@ -7,7 +7,11 @@
         <link  href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <style type="css">
+        .centerText{
 
+        }
+        </style>
     </head>
     
     <body>        
@@ -15,10 +19,16 @@
         <div class="intro-header">
 
         <?php
-            include("header.php");
+            include("includes/header.php");
         ?>
 
-                <div class="intro-message">
+  <br>
+  <br>
+        <div class = "image">
+             <div class="intro-message">
+                    <br>
+                    <br>
+                    <br>
                     <h1>About</h1>
                     <br>
                     <br>
@@ -27,21 +37,10 @@
                     <br>
                     <br>
                     <br>
-                    <div class="row">
-                        <div class="icons col-xs-6 col-sm-offset-2 col-sm-2" style="padding-right: 10px;">
-                            <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"><h5>Over 20 qualified Tutors</h5></i>
-                        </div>
-                        <div class="icons col-xs-6 col-sm-2">
-                            <i class="fa fa-usd fa-2x" aria-hidden="true"><h5>Affordable rates</h5></i>
-                        </div>
-                        <div class="icons col-xs-6 col-sm-2"> 
-                            <i class="fa fa-star fa-2x" aria-hidden="true"><h5>Rating system for accountability</h5></i>
-                        </div>
-                        <div class="icons col-xs-12 col-sm-2"> 
-                            <i class="fa fa-line-chart fa-2x" aria-hidden="true"><h5> Improved grades</h5></i>
-                        </div>
                     </div>                    
                 </div>
+        </div>
+                
             <div id="arrow-down">
                 <a href="#about-me"><i style="color: black;" class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></a>
             </div>
@@ -83,54 +82,9 @@
             </div>
         </div>
         
-        
-        
-<footer class="footer-distributed">
-
-          <div class="footer-left">
-
-            <h3>Tutors</h3>
-
-            <p class="footer-company-name">Tutors &copy; 2017</p>
-          </div>
-
-          <div class="footer-center">
-
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p><span>845 Sherbrooke St W</span> Montreal, Quebec</p>
-            </div>
-
-            <div>
-              <i class="fa fa-phone"></i>
-              <p>+1 514-123-4567</p>
-            </div>
-
-            <div>
-              <i class="fa fa-envelope"></i>
-              <p><a href="mailto:info@mustutors.com">info@mustutors.com</a></p>
-            </div>
-
-          </div>
-
-          <div class="footer-right">
-
-            <p class="footer-company-about">
-              <span>About the company</span>
-              MUS Tutors is a student-run initiative that aims to connect like-minded students.
-
-            <div class="footer-icons">
-
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
-
-            </div>
-
-          </div>
-
-        </footer>
+<?php
+    include("includes/footer.php");
+    ?>
         
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
