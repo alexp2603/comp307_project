@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Latest compiled and minified CSS -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +9,12 @@
         <link href="css/manageaccountstyles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
 
 <?php
 
-	include("includes/head.html");
+    include("includes/head.html");
 	include("includes/header.php");
 
 	$connect = mysqli_connect("localhost", "root", "", "tutor");
@@ -79,11 +77,14 @@
 ?>
 
 <body>
+  <br>
+  <br>
+  <br>
     <div class="container">
 
         <h1>Manage Account</h1>
             <?php
-                echo("<p>Welcome to your accout, $name</p>");
+                echo("<p>Welcome to your account, $name</p>");
             ?>
 
 
@@ -164,7 +165,7 @@
                         $message = "You are being tutored by ".$row['ENGAGEMENT_TUTORNAME']." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
                         echo($message);
                         $row_engagementID = $row['ENGAGEMENT_ID'];
-                        echo("<a class='delete-btn' href='php/deleteengagement.php?course=$row_engagementID'>Delete Engagement</a>");
+                        echo("<a class='delete-btn' href='php/deleteengagement.php?course=$row_engagementID'>   Delete Engagement</a>");
                         echo("</br>");
                         echo("</br>");
                      }
@@ -202,7 +203,7 @@
                         $message = "You are tutoring ".$student_name." in ".$row['ENGAGEMENT_COURSEID']." on ".$row['ENGAGEMENT_DATETIME']." at ".$row['ENGAGEMENT_LOCATION']." for a total of ".$row['ENGAGEMENT_FEE']."$ over the course of ".$row['ENGAGEMENT_DURATION']." minutes";
                         echo($message);
                         $row_engagementID = $row['ENGAGEMENT_ID'];
-                        echo("<a class='delete-btn' href='php/deleteengagement.php?course=$row_engagementID'>Delete Engagement</a></div>");
+                        echo("<a class='delete-btn' href='php/deleteengagement.php?course=$row_engagementID'>   Delete Engagement</a></div>");
                         echo("</br>");
                         echo("</br>");
                     }
