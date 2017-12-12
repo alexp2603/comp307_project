@@ -21,9 +21,17 @@ $app->post('/api/registerstudent', function($request) {
 	$year = $_POST['STUDENT_YEAROFSTUDY'];	
 	$phone = $_POST['STUDENT_PHONE'];	
 
+
 	$query_STUDENTID = mysqli_query($connect, "SELECT count(*) FROM STUDENTS WHERE STUDENT_ID = $id");
     $row_STUDENTID = $query_STUDENTID->fetch_row();
     $numberID = $row_STUDENTID[0];
+
+
+    // Encrypt password in database
+    $string_to_encrypt=$password;
+    $key="key123";
+    $encrypted_string=openssl_encrypt($string_to_encrypt,"AES-128-ECB",$key);
+    // $decrypted_string=openssl_decrypt($encrypted_string,"AES-128-ECB",$key);
 
 
 	if($numberID>0)
@@ -35,9 +43,9 @@ $app->post('/api/registerstudent', function($request) {
 	}
 	else
 	{
-		mysqli_query($connect, "INSERT INTO students(STUDENT_ID, STUDENT_NAME, STUDENT_PASSWORD, STUDENT_EMAIL, STUDENT_YEAROFSTUDY, STUDENT_PHONE) VALUES ('$id', '$name', '$password', '$email', '$year', '$phone')");
-		header("Location: ../../../index.php");
-		exit();
+        mysqli_query($connect, "INSERT INTO students(STUDENT_ID, STUDENT_NAME, STUDENT_PASSWORD, STUDENT_EMAIL, STUDENT_YEAROFSTUDY, STUDENT_PHONE) VALUES ('$id', '$name', '$encrypted_string', '$email', '$year', '$phone')");
+        header("Location: ../../../index.php");
+        exit();
 	}	
 
 });
