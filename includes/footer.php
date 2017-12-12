@@ -14,9 +14,9 @@
 
   <div class="footer-left">
 
-    <h3>Tutors</h3>
+    <h3>Tutor</h3>
 
-    <p class="footer-company-name">Tutors &copy; 2017</p>
+    <p class="footer-company-name">MUS Tutors &copy; 2017</p>
   </div>
 
   <div class="footer-center">
@@ -41,17 +41,8 @@
   <div class="footer-right">
 
     <p class="footer-company-about">
-      <span>About the company</span>
-      Tutors is a student-run initiative that aims to connect like-minded students.
-
-    <div class="footer-icons">
-
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
-
-    </div>
+      <span>About the Company</span>
+      Tutor is a student-run initiative that aims to connect like-minded students.
 
   </div>
 
